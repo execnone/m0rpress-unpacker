@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
 
     if (doesFileExist(inputFile))
     {
-		const char* key = decryptString(GetM0rKey(inputFile, keyOffset, 100));
+		const char* key = GetM0rKey(inputFile, keyOffset, 100);
 
 		std::size_t size;
 		unsigned char* bytes = De_M0rCryptData(ReadFileFromOffset(inputFile, packOffset, size), size, key, strlen(key));
